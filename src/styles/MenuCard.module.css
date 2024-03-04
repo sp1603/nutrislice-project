@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+.container {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+}
+
+.table_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-top: 100px; 
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #18181B;
+  color: #ECEDEE;
+  padding: 30px;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.table th {
+  background-color: #27272A;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #A1A1AA;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px; 
+}
+
+.table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table td {
+  padding: 8px;
+  margin: 0;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #18181B; 
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #27272A; 
+}
+
+.table tbody tr:hover {
+  background-color: #132946;
+}

@@ -1,0 +1,17 @@
+.header {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #033A40;
+    color: white;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    height: 5%;
+    width: 100%;
+
+}
