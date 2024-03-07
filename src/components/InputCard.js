@@ -11,7 +11,6 @@ export default function InputCard(props) {
     const router = useRouter();
 
     const handleNutritionButtonClick = () => {
-        // router.push('/menu');
         router.push({
             pathname: '/menu',
             query: {

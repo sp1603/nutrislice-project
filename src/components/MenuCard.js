@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
 import styles from "@/styles/MenuCard.module.css";
 
@@ -6,24 +7,25 @@ export default function MenuCard(props) {
   const {dining_hall, meal, year, month, day} = props;
   const [items, setItems] = useState({});
   const [nutrition, setNutrition] = useState({});
+  const router = useRouter();
 
   useEffect(() => {
     async function fetchData() {
-
+      try {
       const response = await fetch(`/api/food?dining_hall=${dining_hall}&meal=${meal}&year=${year}&month=${month}&day=${day}`);
-      if (!response.ok) {
-        return;
-      }
-
       const data = await response.json();
-      setItems(data);
 
+      setItems(data);
       const foodItems = Object.values(data).flat();
 
       const nutritionResponse = await fetch(`/api/calories?food=${foodItems.join('')}`);
       const nutritionData = await nutritionResponse.json();
+
       setNutrition(nutritionData);
-      console.log(nutrition)
+
+      } catch (error) {
+        router.push('/error')
+      }
     }
 
     fetchData();

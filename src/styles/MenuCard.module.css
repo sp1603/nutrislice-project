@@ -58,3 +58,17 @@
 .table tbody tr:hover {
   background-color: #132946;
 }
+
+.loading_screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.loading_text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  align-self: center;
+}
